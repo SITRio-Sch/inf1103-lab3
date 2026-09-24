@@ -11,7 +11,7 @@ def get_valid_input():
         return user_input
 
 def process_delivery(current_total, new_value): 
-    current_total =+ new_value
+    current_total += new_value
     return(current_total)
 
 def calculate_tax(amount):
@@ -35,7 +35,7 @@ while True:
         print(f"Tax: {calculate_tax(inventory)}")
         break
     else:
-        inventory += user_input
+        inventory = process_delivery(inventory, user_input)
         if inventory > 500:
                 print("Error! Total inventory exceeds 500 units!")
                 break
